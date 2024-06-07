@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+h1 {
+  text-align: center;
+  color: #B60707;
+  font-size: 3rem;
+            position: relative;
+            animation: wave 3s infinite alternate;
+        }
+
+        @keyframes wave {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+}
+
+
+        :root {
+            --bpw-background-color: #540e09; /* Change this to your desired background color */
+            --bpw-primary-color: #007bff; /* Change this to your desired primary color */
+            --bpw-secondary-color: #6c757d; /* Change this to your desired secondary color */
+            --bpw-button-color: #007bff; /* Change this to your desired button color */
+            --bpw-button-text-color: #540e09; /* Change this to your desired button text color */
+        }
+
+        .bpw-bot-fullscreen {
+            background-color: var(--bpw-background-color);
+        }
+
+        .bpw-bot-fullscreen .bpw-header {
+            background-color: var(--bpw-primary-color);
+            color: var(--bpw-button-text-color);
+        }
+
+        .bpw-widget-icon img {
+            content: url('https://aloufy.000.pe/img.png'); /* Replace with your icon URL */
+            width: 24px;
+            height: 24px;
+        }
+
+
+</style>
+</head>
+<h1>جاري التحميل</h1>
+<body>
+<script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+ 
+
+<script>
+    window.botpressWebChat.init({
+        // Replace <your-bot-id> and <your-client-id> with your actual bot and client IDs
+        "botId": "350850d2-b2a4-4b0f-92f4-12329dff50e0",
+        "clientId": "350850d2-b2a4-4b0f-92f4-12329dff50e0",
+ 
+        // Set the URL for the Botpress WebChat JavaScript file and the messaging server
+        "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+        "messagingUrl": "https://messaging.botpress.cloud",
+ 
+        // Set the name of the bot that will be displayed in the WebChat interface
+        "botName": "محامي",
+ "composerPlaceholder": "اسال محامي",
+      "botConversationDescription": "يساعدك علي الإجابة علي اسألتك في قانون الأسرة بدولة قطر",
+
+     
+     "avatarUrl": "https://aloufy.000.pe/assets/ic_launcher.png",
+
+      
+        // Set the width of the WebChat container and layout to 100% (Full Screen)
+        "containerWidth": "100%25",
+        "layoutWidth": "100%25",
+ "stylesheet": "",
+        // Hide the widget and disable animations
+        "hideWidget": true,
+        "disableAnimations": true,
+    });
+ 
+    // Opens up the Chatbot by default
+    // This lets users start chatting with the Chatbot without needing to click any buttons or menus.
+    window.botpressWebChat.onEvent(
+        function () {
+            window.botpressWebChat.sendEvent({ type: "show" });
+        },
+        ["LIFECYCLE.LOADED"]
+    );
+</script>
+ 
+</body>
+ 
+ </html>
