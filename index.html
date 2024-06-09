@@ -3,16 +3,33 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        /* Your existing styles here */
+       /* Define your theme colors */
+:root {
+  --bpw-primary-color: #4A90E2; /* Primary color for the chat header */
+  --bpw-background-color: #F5F8FA; /* Background color for the chat window */
+  --bpw-button-color: #4A90E2; /* Button color for send button */
+  --bpw-button-text-color: #FFFFFF; /* Text color for buttons */
+}
 
-        /* Custom theme color */
-        :root {
-            --bpw-background-color: #000;
-            --bpw-primary-color: #007bff;
-            --bpw-send-button-background:#000;
-            /* Add other custom colors if needed */
-            --bpw-send-button: #540e09;
-        }
+/* Apply custom styles to the chat header */
+.bpw-header {
+  background-color: var(--bpw-primary-color);
+  color: var(--bpw-button-text-color);
+}
+
+/* Customize the background of the chat window */
+.bpw-conversation-container {
+  background-color: var(--bpw-background-color);
+}
+
+/* Style the send button */
+.bpw-send-button {
+  background-color: var(--bpw-button-color);
+  color: var(--bpw-button-text-color);
+}
+
+/* Additional customizations can be added here */
+
 
 
         
